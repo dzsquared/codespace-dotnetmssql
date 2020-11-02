@@ -1,4 +1,5 @@
 # C# (.NET Core) and MS SQL
+This project is a part of the vscode-dev-containers project here: https://github.com/microsoft/vscode-dev-containers/. 
 
 ## Summary
 
