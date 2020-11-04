@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: sqlpackage /version
+- script: sqlpackage.exe /version
   displayName: 'get sqlpackage version'
 
 - script: |
