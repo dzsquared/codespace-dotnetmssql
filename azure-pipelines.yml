@@ -15,7 +15,7 @@ steps:
 
 - script: |
     cd "C:\Program Files\Microsoft SQL Server\150\DAC\bin\"
-    ./sqlpackage.exe /version
+    sqlpackage.exe /version
   displayName: 'get sqlpackage version'
 
 - script: |
