@@ -26,4 +26,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: get sqlpackage version
         working-directory: C:\Program Files\Microsoft SQL Server\150\DAC\bin\
-        run: ls
+        run: ./sqlpackage.exe /version
