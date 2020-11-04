@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: ls
+- script: ./sqlpackage.exe /version
   workingDirectory: C:\Program Files\Microsoft SQL Server\150\DAC\bin\
   displayName: 'get sqlpackage version'
 
