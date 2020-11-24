@@ -1,5 +1,5 @@
 {
-	"name": "C# (.NET Core)",
+	"name": "C# (.NET Core) and MS SQL",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
@@ -9,7 +9,7 @@
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"mssql.connections": [
 			{
-				"server": "localhost,61433",
+				"server": "localhost,1433",
 				"database": "",
 				"authenticationType": "SqlLogin",
 				"user": "sa",
@@ -25,7 +25,7 @@
 	"extensions": [
 		"ms-dotnettools.csharp",
 		"ms-mssql.mssql"
-	]
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
@@ -54,8 +54,7 @@
 	//      "mounts": [ "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind" ],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "dotnet restore",
+	// postCreateCommand.sh parameters: $1=SA password, $2=dacpac path, $3=sql script(s) path
+	"postCreateCommand": "bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'"
 
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
 }
